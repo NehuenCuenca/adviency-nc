@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles23.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://app.embed.im/snow.js" defer></script>
+    <title>dia 23</title>
+</head>
+<body>
+    <audio src="./assets/X2Download.app - Wham! - Last Christmas (Lyrics) (320 kbps).mp3" autoplay controls>
+        <p>If you are reading this, it is because your browser does not support the audio element. 🙁    </p>
+    </audio>
+
+    <div class="modal" style="display: none;">
+        <div class="container">
+            <button type="button" class="btn btn-cerrar">Cerrar</button>
+            <ul id="lista-regalos-previsualizacion"></ul>
+        </div>
+    </div>
+
+    <div class="modal" style="display: none;">
+        <form id="agregar-regalo">
+            <button type="button" class="btn btn-cerrar">Cerrar</button>
+            <label for="nuevo-regalo">¡Pedile un 🎁 a la Dincyneta!</label>
+            <button type="button" class="btn btn-aleatorio">✨Regalo aleatorio✨</button>
+            <input type="text" name="texto" id="nuevo-regalo" placeholder="Por ej: una pala 🥵" required maxlength="50">
+            <input type="text" name="destinatario" id="destinatario-regalo" placeholder="¿Para quien es?" required>
+            <input type="number" name="cantidad" id="cantidad-regalo" placeholder="¿Cuantos querés?" min="1">
+            <input type="number" name="precio" id="precio-regalo" placeholder="¿Que precio tiene?" min="1">
+            <input type="text" name="urlImagen" id="img-regalo" placeholder="Una URL de una imagen de Google">
+            <button type="submit" class="btn">Guardar regalo</button>
+        </form>
+    </div>
+        
+    <div class="container-lista-regalos">
+        <h1 id="title">
+            <span class="emote">🎅🏽</span>
+            ¡LLEGÓ EL <span class="red">ADVIENCY</span>!
+            <span class="emote">🥳</span>
+        </h1>
+        <div id="botonera">
+            <button class="btn" id="agregar-regalo" tabindex="0">Agregar regalo</button>
+            <button class="btn" id="previsualizar-regalos" tabindex="0">Previsualizar</button>
+            <button class="btn" id="imprimir-regalos" tabindex="0">Imprimir lista</button>
+            <button class="btn" id="borrar-todos" tabindex="0">Borrar todos</button>
+            <button class="btn" id="borrar-storage" style="display: none;">Borrar storage</button>
+        </div>
+        <h3 id="costo-total">Total: $0</h3>
+        <ul id="lista-regalos"></ul>
+    </div>
+</body>
+<script src="dia23.js"></script>
+</html>

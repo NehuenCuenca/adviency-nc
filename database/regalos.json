@@ -1,0 +1,21 @@
+[{
+    "texto": "medias",
+    "destinatario": "yo",
+    "cantidad": 2,
+    "urlImagen": "../14/assets/cono-placeholder.jpg",
+    "id": 1671287975000
+},
+ {
+    "texto": "calzoncillos",
+    "destinatario": "super yo",
+    "cantidad": 2,
+    "urlImagen": "../14/assets/cono-placeholder.jpg",
+    "id": 1671287975000
+},
+{
+    "texto": "carbon",
+    "destinatario": "yonathan",
+    "cantidad": 2,
+    "urlImagen": "../14/assets/cono-placeholder.jpg",
+    "id": 1671287975000
+}]

@@ -1,0 +1,277 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    height: auto;
+    background: url('./assets/fondo3.jpg') fixed center;
+    background-size: cover;
+    padding: 12% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 5vh;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 100vh;
+    padding: 5rem 0rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow-y: scroll;
+}
+
+form#agregar-regalo[name="agregar-regalo"] { background-color: rgba(214, 161, 93, 0.85);}
+form#agregar-regalo[name="editar-regalo"] { background-color: rgba(33, 205, 147, 0.85);}
+form#agregar-regalo {
+    width: 30%;
+    padding: 1rem;
+    /* background-color: rgba(29,80,127, 0.7); */
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+#agregar-regalo label { 
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#agregar-regalo input {
+    width: 80%;
+    padding: 0.4rem;
+    border-radius: 4px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1.1rem;
+} 
+
+.btn {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    transition: font-size 500ms ease;
+}
+
+.btn-cerrar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1.6;
+}
+
+.btn-aleatorio {
+    font-weight: 700;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+
+
+.container-lista-regalos {
+    width: 55%;
+    height: auto;
+    padding: 0.2rem 1rem 1rem 1rem;
+    border-radius: 0.2rem 1rem;
+    background-color: green;
+    box-shadow: 5px 5px 5px rgba(0,128,0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 4vh;
+}
+
+.container-lista-regalos #title {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 5px black;
+    user-select: none;
+}
+#title .emote {
+    font-style: normal;
+}
+#title .red { 
+    color: rgb(224, 52, 52);
+    letter-spacing: 3px;
+}
+
+
+#botonera {
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0, 0.2);
+    box-shadow: 5px 5px 5px rgba(0,255,0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul#lista-regalos {
+    width: 90%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+li.regalo {
+    width: 100%;
+    border-radius: 1rem;
+    border: 0.245rem dashed black;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2vw;
+}
+
+.regalo a { 
+    width: 20%;
+    height: 6rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 3px solid black;
+    transition: transform 500ms ease;
+}
+.regalo a:hover{ transform: scale(1.1); }
+
+.regalo a img {
+    width: 100%;
+}
+.regalo span { 
+    width: 70%;
+    height: auto;
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 2.5rem;
+    /* text-align: justify; */
+    overflow-wrap: anywhere;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.regalo .acciones {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    row-gap: 1vh;
+}
+
+li.regalo:nth-child(odd) { 
+    background-color: rgba(215,0,0, 0.75); 
+    box-shadow: 5px 5px 5px rgba(215,0,0, 0.4);
+} 
+li.regalo:nth-child(even){ 
+    background-color: rgba(255,230,0, 0.75); 
+    box-shadow: 5px 5px 5px rgba(255,230,0, 0.4);
+}
+
+li.cartel-msj {
+    width: 90%;
+    padding: 0.8rem;
+    background-color: red;
+    border: 3px solid white;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#costo-total {
+    margin: 0;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.modal .container { 
+    width: 50%;
+    height: 85vh;
+    padding: 2rem 1rem;
+    background-color: #e73c7e;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+#lista-regalos-previsualizacion {
+    margin: 0;
+    padding: 2rem;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 3vh;
+    overflow-y: auto;
+}
+
+audio {
+    width: 20%;
+    position: fixed;
+    bottom: 0%;
+    left: 1%;
+}
