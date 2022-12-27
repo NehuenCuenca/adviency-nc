@@ -113,8 +113,13 @@ const imprimirRegalo = (objRegalo) => {
 
     listaRegalos.innerHTML += `
         <li class="regalo" id="${id}" data-regalo="${id}">
-            <a href="${urlImagen}" target="_blank" tabindex="-1"> <img src="${urlImagen}" alt="foto del regalo"> </a>
-            <span>🎁: ${texto}  <br>${cantidad} unidad/es -> Total: ${precio}<br> 👤: ${destinatario}</span>
+            <a href="${urlImagen}" target="_blank" tabindex="-1"> <img class="img-regalo" src="${urlImagen}" alt="foto del regalo"> </a>
+            <div class="datos">
+                <span> 🎁: ${texto} </span>
+                <span> ${cantidad} unidad/es </span>
+                <span> Total: $${precio} </span>
+                <span> 👤: ${destinatario }</span>
+            </div>
             <div class="acciones">
                 <button type="button" class="btn" onClick="duplicarRegalo(${id})" tabindex="0">x2</button>
                 <button type="button" class="btn" onClick="editarRegalo(${id})" tabindex="0">✍🏽</button>
@@ -221,7 +226,12 @@ const actualizarRegalo = (viejo, nuevo) => {
     //Actualizo el DOM
     const { texto, destinatario, cantidad, precio } = regalos[indexRegalo];
     const liRegalo = listaRegalos.querySelector(`li.regalo[id="${id}"]`);
-    liRegalo.querySelector('span').innerHTML = `🎁: ${texto}  <br>${cantidad} unidad/es -> Total: ${precio}<br> 👤: ${destinatario}`;
+    
+    liRegalo.querySelector('.datos').innerHTML = `
+        <span> 🎁: ${texto} </span>
+        <span> ${cantidad} unidad/es </span>
+        <span> Total: $${precio} </span>
+        <span> 👤: ${destinatario }</span>`;
 }
 
 const checkearStorage = () => { 

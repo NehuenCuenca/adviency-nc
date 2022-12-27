@@ -101,6 +101,7 @@ form#agregar-regalo {
 
 .container-lista-regalos {
     width: 55%;
+    min-width: 25rem;
     height: auto;
     padding: 0.2rem 1rem 1rem 1rem;
     border-radius: 0.2rem 1rem;
@@ -135,16 +136,20 @@ form#agregar-regalo {
 
 #botonera {
     width: 80%;
+    min-width: 10rem;
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: rgba(0,0,0, 0.2);
     box-shadow: 5px 5px 5px rgba(0,255,0, 0.2);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    row-gap: 3vh;
 }
 
 ul#lista-regalos {
+    
     width: 90%;
     height: auto;
     padding: 0;
@@ -158,6 +163,7 @@ ul#lista-regalos {
 }
 
 li.regalo {
+    min-width: 20rem;
     width: 100%;
     border-radius: 1rem;
     border: 0.245rem dashed black;
@@ -169,6 +175,7 @@ li.regalo {
 }
 
 .regalo a { 
+    min-width: 5rem;
     width: 20%;
     height: 6rem;
     overflow: hidden;
@@ -181,17 +188,17 @@ li.regalo {
 }
 .regalo a:hover{ transform: scale(1.1); }
 
-.regalo a img {
-    width: 100%;
+.regalo a .img-regalo {  
+    height: 8rem;
+    object-fit: cover;
+    object-position: center center;
 }
-.regalo span { 
-    width: 70%;
+.regalo .datos { 
+    min-width: 10rem;
+    width: 85%;
     height: auto;
     font-size: 1.4rem;
-    text-align: left;
     line-height: 2.5rem;
-    /* text-align: justify; */
-    overflow-wrap: anywhere;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -274,4 +281,42 @@ audio {
     position: fixed;
     bottom: 0%;
     left: 1%;
+}
+
+@media (max-width: 375px) {
+    audio {
+        display: none;
+    }
+
+    li.regalo {
+        width: 100%;
+        border-radius: 1rem;
+        border: 0.245rem dashed black;
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2vw;
+        row-gap: 2vh;
+    }
+
+    .regalo a {
+        width: 10rem;
+    }
+    .regalo a .img-regalo{
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .regalo .acciones {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2vw;
+    }
 }
