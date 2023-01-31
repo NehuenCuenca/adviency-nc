@@ -48,4 +48,4 @@ Este es un proyecto de una lista de regalos de navidad. Consiste en realizar la 
 
 - Día 23: Ya casi es navidad! Agreguemos unos copitos de nieve a nuestra app para darle el último toque navideño ❄
 
-Creditos a: Gonzalo Pozzo (https://twitter.com/goncy)(https://www.youtube.com/channel/UCCvaRcYdZCZBrBQVnsUBg5Q)
+Creditos a: Gonzalo Pozzo (https://twitter.com/goncy) (https://www.youtube.com/channel/UCCvaRcYdZCZBrBQVnsUBg5Q)
