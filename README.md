@@ -1,4 +1,4 @@
-# Adviency
+# Adviency 
 Este es un proyecto de una lista de regalos de navidad. Consiste en realizar la misma aplicacion por 24 dias, pero cada dia sumandole algo nuevo, la lista de requerimientos es la siguiente:
 
 ### Requerimientos: 
@@ -47,3 +47,5 @@ Este es un proyecto de una lista de regalos de navidad. Consiste en realizar la 
 - Día 22: Levantemos el espíritu navideño agregando un sonido navideño de fondo. No tan alto, tiene que estar deshabilitado por defecto y el usuario puede habilitarlo.
 
 - Día 23: Ya casi es navidad! Agreguemos unos copitos de nieve a nuestra app para darle el último toque navideño ❄
+
+Creditos a: Gonzalo Pozzo (https://twitter.com/goncy)(https://www.youtube.com/channel/UCCvaRcYdZCZBrBQVnsUBg5Q)
