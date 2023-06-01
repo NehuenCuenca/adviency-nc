@@ -110,7 +110,7 @@ const guardarRegalo = (objRegalo) => {
 
 const imprimirRegalo = (objRegalo) => { 
     const { id, texto, destinatario, cantidad, precio, urlImagen } = objRegalo;
-
+    console.log(urlImagen)
     listaRegalos.innerHTML += `
         <li class="regalo" id="${id}" data-regalo="${id}">
             <a href="${urlImagen}" target="_blank" tabindex="-1"> <img class="img-regalo" src="${urlImagen}" alt="foto del regalo"> </a>
@@ -280,13 +280,14 @@ const toggleFormAgregarRegalo = () => {
 const manejarImagenRegalo = async(url) => { 
     try {
         const { status } = await fetch(url)
+        
         if( url === '' || status === 404){
-            return '../14/assets/cono-placeholder.jpg';
+            return '/assets/cono-placeholder.jpg';
         }
 
         return url;
     } catch (error) {
-        return '../14/assets/cono-placeholder.jpg';
+        return '/assets/cono-placeholder.jpg';
     }
 }
 
@@ -389,6 +390,7 @@ const imprimirListaRegalos = () => {
 
 const toggleBtnsAcciones = () => { 
     const btns = Array.from(listaRegalos.querySelectorAll('.acciones'));   
+    if( btns.length === 0 )  return;
     const estanOcultos = btns[0].hasAttribute('style');
 
     if( !estanOcultos ){
